@@ -29,11 +29,13 @@ body
     min-height: 100%
     font-size: 18px 
     line-height: 21px
+    color: $black
+    overflow-x: hidden
 
 h1, h2
     color: $blue
     font-family: "Oswald"
-    font-weight: 600
+    font-weight: 600!important
     letter-spacing: 0
     padding: 30px 0
     text-transform: uppercase
@@ -43,9 +45,21 @@ h1
     line-height: 108px
     text-align: left
 
+    @media (max-width: 1024px)
+        font-size: 70px
+        line-height: 88px
+
+    @media (max-width: 768px)
+        font-size: 50px
+        line-height: 68px
+
+    @media (max-width: 425px)
+        font-size: 40px
+        line-height: 58px
+
 h2
     font-size: 56px
-    line-height: 56px
+    line-height: 67px
     text-align: center
 
 .menu
@@ -55,7 +69,6 @@ h2
 
     &-header
         max-width: 1732px
-
 
     &-footer
         display: flex
@@ -68,8 +81,11 @@ h2
             color: $white
             text-transform: uppercase
     
-    img
+    img, svg
         margin: 15px 0
+
+        @media (max-width: 1024px)
+            margin: 15px 0 15px 15px
 
 .btn
     background-color: $orange
@@ -79,6 +95,7 @@ h2
     cursor: pointer
     max-width: 409px
     height: 80px
+    padding: 15px
     font-family: "Onest"
     font-weight: 700
     font-size: 24px
@@ -90,29 +107,43 @@ h2
     &:hover
         box-shadow: $shadow
         transition: 0.3s ease
+        color: $white
 
 .mainBlock
     padding: 0
     width: 1920px
+
+    @media (max-width: 1024px)
+        width: 1024px
+
+    @media (max-width: 768px)
+        width: 768px
+
+    @media (max-width: 425px)
+        width: 425px
 
     &-text
         height: 100%
         max-width: 1024px
         padding-top: 144px
         padding-left: 94px
+        
+        @media (max-width: 1024px)
+            padding-top: 30px
+            padding-left: 15px
 
 .banner
-    background: linear-gradient(to right, white 43%, transparent 100%), url(/img/team.jpg) 13% 86%/151% no-repeat
+    background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 13% 86%/151% no-repeat
     height: 976px
     p
         color: $black
         font-weight: 500
         font-size: 36px
         line-height: 32.4px
-        letter-spacing: 1%
         margin-top: 42px
         
     .btn
+        display: block
         margin-top: 120px
 
 .discus
@@ -167,7 +198,7 @@ h2
             margin: 0 auto
 
 .freeConsultation
-    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(/img/consultation.jpg) 0 100% / 100% no-repeat
+    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 100% / 100% no-repeat
     padding-bottom: 160px
 
     &-strip
@@ -196,47 +227,66 @@ h2
     &-item
         width: 320px
         height: 160px
-        border: 4px solid $grey-2 
         border-radius: 20px
         padding: 13px
         font-size: 22px
         line-height: 26px
+        position: relative
+
+        svg
+            position: absolute
+            z-index: 1
+
+            &:after
+                content: ""
+                background-color: #fff
+                width: 200px
+                height: 200px
+                position: absolute
 
     &-text
         background-color: $white
-        height: 120px
-        width: 342px
-        padding: 27px 15px 15px 67px
-        border-radius: 20px
-        box-shadow: $shadow
+        border-radius: 0 20px 20px 0
+        height: 110px
+        width: 320px
+        padding: 27px 15px 15px 80px
         position: relative
-        
+        left: 72px
+        bottom: -5px
+        min-height: 139px
+        top: 10px
+        box-shadow: 0px 4px 15px 0px #2E3F4F40
+        z-index: 0
+
         &:before
-            content:''
-            background-color: $white
-            border: 5px solid $grey-2
+            content: ""
+            width: 110px
+            height: 137px
             border-radius: 100%
-            width: 88px
-            height: 88px
+            background-color: #eef0f3
             display: flex
             position: absolute
-            top: 25px
-            left: -43px
-
+            top: 1px
+            left: -53px
+            z-index: 1
+        
         &:after
             content: ""
-            width: 120px
-            height: 120px
-            border-radius: 100%
-            background-color: $grey
-            display: flex
-            position: absolute
-            top: 0
-            left: -70px
+            background-color: #fff
+            width: 110px
+            height: 137px
+
+.whiteLine
+    width: 5px;
+    height: 139px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    right: -60px;
+    top: 23px;
 
 .bigText
     font-weight: 400
-    font-style: Regular
     font-size: 26px
     line-height: 32px
     text-align: center
@@ -245,7 +295,6 @@ h2
 .whyItsWork
     background-color: $grey
     font-weight: 400
-    font-style: Regular
     font-size: 24px 
     line-height: 28.8px
     padding-bottom: 160px
@@ -292,7 +341,7 @@ h2
             padding: 14px
 
 .steps
-    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(/img/consultation.jpg) 0 100% / 100% no-repeat
+    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 132% / 100% no-repeat
     padding-bottom: 160px
 
     h2
@@ -311,9 +360,59 @@ h2
     .btn
         margin: 0 auto
         display: block
+    
+.benefits
+    margin: 102px auto 120px auto
+    max-width: 1290px 
+    padding: 20px
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(409px, 1fr))
+    grid-auto-rows: 160px
+    grid-auto-flow: column
+    gap: 60px 46px 
+
+    &__inner
+        border-radius: 8px
+        padding: 43px
+        transition: transform .3s ease
+        position: relative
+        left: 90px
+        bottom: -5px
+        z-index: 2
+
+    &__item
+        position: relative
+        &:hover 
+            transform: translateY(-5px)
+            transition: 0.3s ease
+
+        svg
+            position: absolute
+            z-index: 1
+        
+        &__title 
+            font-size: 20px
+            line-height: 21px
+            font-weight: bold
+            margin-bottom: 10px
+            color: #333
+            text-transform: uppercase
+        
+        &__description 
+            font-size: 16px
+            color: $black
+            line-height: 1.4
+
+.right
+    .benefits__inner
+        left: 0
+        padding: 35px 0 0px 61px
 
 .tall
     grid-row: span 2
+    
+    .benefits__inner
+        left:0
 
     .benefits__item__title
         font-weight: 700
@@ -329,52 +428,27 @@ h2
         line-height: 32px
         text-align: center
 
-    
-.benefits
-    margin: 102px auto 120px auto
-    max-width: 1290px 
-    padding: 20px
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(409px, 1fr))
-    grid-auto-rows: 160px
-    grid-auto-flow: column
-    gap: 60px 46px 
-
-    &__inner
-        background: linear-gradient(155.24deg, #F2F2F2 18.96%, #FFFFFF 81.6%)
-        border-radius: 8px
-        padding: 43px
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-        transition: transform 0.3s ease
-
-    &__item
-
-        &:hover 
-            transform: translateY(-5px)
-        
-        &__title 
-            font-size: 20px
-            font-weight: bold
-            margin-bottom: 10px
-            color: #333
-            text-transform: uppercase
-        
-        &__description 
-            font-size: 16px
-            color: #020202
-            line-height: 1.4
-
 .help
     h2
         margin-top: 100px
 
-
 .testimonials
-    &-slider
+    display: block
+    &-container
         display: flex
-        gap: 32px
+        justify-content: center
+    &-slider
         margin-top: 94px
-        margin-bottom: 58px
+        display: flex
+        flex-wrap: wrap
+        gap: 32px
+        position: relative
+        padding: 0
+        list-style: none
+        
+        .slick-track
+            display: flex
+            gap: 2.4rem
 
 .testimonial
     &-slide
@@ -382,6 +456,7 @@ h2
         border-radius: 20px
         box-shadow: $shadow
         padding: 40px
+        max-width: 409px
 
     &-content
         margin: 0 auto
@@ -416,5 +491,169 @@ h2
             font-size: 18px
             line-height: 21.6px
             text-align: center
+            color: $black
 
 
+.slider
+    &-controls
+        margin: 57px auto
+        display: flex
+        justify-content: center
+        width: 100%
+
+.slick
+    &-list
+        height: 100%
+        width: 100%
+        overflow: hidden
+        z-index: 3
+        position: relative
+        margin: 0
+        padding: 0
+
+.slick-next, 
+.slick-prev
+    border: none
+    background-color: transparent
+    background-repeat: no-repeat
+    background-position: center center
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='24' viewBox='0 0 48 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM47.0607 13.0607C47.6464 12.4749 47.6464 11.5251 47.0607 10.9393L37.5147 1.3934C36.9289 0.807611 35.9792 0.807611 35.3934 1.3934C34.8076 1.97919 34.8076 2.92893 35.3934 3.51472L43.8787 12L35.3934 20.4853C34.8076 21.0711 34.8076 22.0208 35.3934 22.6066C35.9792 23.1924 36.9289 23.1924 37.5147 22.6066L47.0607 13.0607ZM2 12V13.5H46V12V10.5H2V12Z' fill='%232E3F4F'%3E%3C/path%3E%3C/svg%3E");
+    cursor: pointer
+
+.slick-prev 
+    transform: rotateY(180deg)
+
+.slick-arrow
+    height: 4rem
+    width: 4rem
+    font-size: 0
+
+.sliderNav 
+    .slick-prev
+        margin-right: 2.4rem
+
+.faq
+    background: linear-gradient(to top, $grey-3 80%, $grey-3 0%)
+    h2
+        margin: 100px 0 82px 0
+
+
+.tabs
+    max-width: 850px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    justify-content: center
+    margin: 0 auto
+    padding-bottom: 114px
+
+    &-head
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        color: $black
+        position: relative
+
+        &:after 
+            content: '+'
+            position: absolute
+            right: 20px
+            font-size: 72px
+            font-weight: 100
+            color: $orange
+            transition: transform 0.3s ease
+            
+    &-text
+        font-weight: 400
+        font-size: 24px
+        line-height: 28px
+        padding: 0 20px
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.3s ease, padding 0.3s ease
+
+    &-item
+        padding: 18px 24px 18px 57px
+        border: 2px solid $blue
+        border-radius: 10px
+        font-family: Onest
+        font-weight: 600
+        font-size: 24px
+        line-height: 24px
+        overflow: hidden
+        
+        &.active .tabs-head
+            &:after
+                content: '-'
+        
+        &.active .tabs-text 
+            padding: 20px 0
+            max-height: 200px
+
+.content-opacity
+    background-color: rgba(239, 241, 244, 0.8)
+    padding-bottom: 100px
+        
+.formOuter 
+    background-image: url(https://opti.ooo/bitrix/templates/opti/img/free.jpg) 
+    background-position: 0 100%
+    background-size: 100% 
+    background-repeat: no-repeat
+    font-weight: 500
+    font-size: 26px
+    line-height: 32px
+    text-align: center
+    color: $black
+
+    p
+        color: $black
+
+    a
+        color: $orange
+
+.form
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 627px
+        margin: 80px auto 72px auto
+        gap: 28px
+
+        button
+            margin: 0 auto
+
+    input
+        width: 474px
+        height: 72px
+        border-radius: 10px
+        font-weight: 400
+        font-size: 24px
+        line-height: 24px
+        padding-left: 32px
+        background-color: rgba(255, 255, 255, 0)
+        
+        &:placeholder
+            color: $black
+
+.orange
+    color: $orange
+
+.support
+    h2
+        margin-top: 180px
+        font-weight: 500
+        font-size: 90px
+        line-height: 108px
+        padding: 30px 0 42px 0
+
+    p
+        color: $black
+        font-weight: 500
+        font-size: 36px
+        line-height: 43.2px
+        letter-spacing: 1px
+        margin: 0 auto
+        max-width: 1291px
+        text-align: center
