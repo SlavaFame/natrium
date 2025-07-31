@@ -1,22 +1,66 @@
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabsItems = document.querySelectorAll('.tabs-item');
-            
-            tabsItems.forEach(item => {
-                const head = item.querySelector('.tabs-head');
+document.addEventListener('DOMContentLoaded', function() {
+    const tabsItems = document.querySelectorAll('.tabs-item');
                 
-                head.addEventListener('click', function() {
-                    // Закрываем все табы
-                    tabsItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
+    tabsItems.forEach(item => {
+        const head = item.querySelector('.tabs-head');
                     
-                    // Открываем/закрываем текущий таб
-                    item.classList.toggle('active');
-                });
+        head.addEventListener('click', function() {
+            tabsItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
             });
-            
-            // По желанию: открыть первый таб по умолчанию
-            // tabsItems[0].classList.add('active');
+            item.classList.toggle('active');
         });
+    });
+    
+    const sliderItems = document.querySelectorAll('.testimonial-slide');
+        sliderItems.forEach(slideItem => {
+            const slide = slideItem.querySelector('.testimonial-text');
+                
+            slide.addEventListener('click', function() {
+                sliderItems.forEach(otherSlide => {
+                    if (otherSlide !== slideItem) {
+                        otherSlide.classList.remove('active');
+                    }
+                }); 
+                slideItem.classList.toggle('active');
+            });
+        });
+
+});
+
+
+
+ $(".testimonials-slider").slick({
+    focusOnSelect: false,
+    fade: false,
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    appendArrows: $(".slider-controls"),
+
+    responsive: [
+        {
+            breakpoint:1440,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint:1024,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint:768,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
+
+});
