@@ -80,6 +80,9 @@ h2
     width: 100%
     height: 120px
 
+    @media (max-width: $sm)
+        height: auto
+
     &-header
         max-width: 1732px
 
@@ -90,6 +93,9 @@ h2
         align-items: center
         margin-top: 138px
         max-width: 1732px
+
+        @media (max-width: $sm)
+            flex-wrap: wrap
 
         a
             color: $white
@@ -188,6 +194,10 @@ h2
     @media (max-width: 425px)
         background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 230% no-repeat 
 
+    @media (max-width: 376px)
+        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 260% no-repeat 
+
+
     p
         color: $black
         font-weight: 500
@@ -249,10 +259,14 @@ h2
 
         svg
             margin: 0 auto
+            
+            @media (max-width: 425px)
+                width: 110px
+                height: 80px
 
 .freeConsultation
     padding-bottom: 160px
-    background: linear-gradient(to top, $grey-3 60%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -700px / 100% no-repeat
+    background: linear-gradient(to top, $grey-3 60%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -950px / 100% no-repeat
 
     @media (max-width: 2560px)
         background: linear-gradient(to top, $grey-3 60%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -700px / 100% no-repeat
@@ -336,9 +350,9 @@ h2
     @media (max-width: $md)
         margin-top: 32px
         gap: 65px
+        justify-content: flex-start
 
     &-item
-        //width: 320px
         height: 160px
         border-radius: 20px
         padding: 13px
@@ -348,10 +362,17 @@ h2
 
         @media (max-width: $md)
             width: auto
+            padding: 0
+
+        @media (max-width: 375px)
+            font-size: 18px
 
         svg
             position: absolute
             z-index: 1
+
+            @media (max-width: $md)
+                max-width: 100%
 
             &:after
                 content: ""
@@ -361,45 +382,16 @@ h2
                 position: absolute
 
     &-text
-        background-color: $white
-        border-radius: 0 20px 20px 0
-        height: 110px
-        width: 320px
-        padding: 27px 15px 15px 80px
+        padding: 29px 16px 15px 135px
         position: relative
-        left: 72px
-        bottom: -5px
         min-height: 139px
+        max-width: 341px
         top: 10px
-        box-shadow: 0px 4px 15px 0px #2E3F4F40
-        z-index: 0
+        z-index: 1
 
-        &:before
-            content: ""
-            width: 110px
-            height: 137px
-            border-radius: 100%
-            background-color: #eef0f3
-            display: flex
-            position: absolute
-            top: 1px
-            left: -53px
-            z-index: 1
-        
-        &:after
-            content: ""
-            background-color: #fff
-            width: 110px
-            height: 137px
-
-.whiteLine
-    width: 5px
-    height: 139px
-    background-color: #fff
-    position: absolute
-    z-index: 2
-    right: -34px
-    top: 23px
+        @media (max-width: 425px)
+            padding: 29px 16px 15px 110px
+            
 
 .bigText
     font-weight: 400
@@ -470,7 +462,7 @@ h2
             padding: 14px
 
 .steps
-    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 132% / 100% no-repeat
+    background: linear-gradient(to top, $grey-3 70%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -950px / 100% no-repeat
     padding-bottom: 160px
 
     @media (max-width: $xxl)
@@ -562,7 +554,7 @@ h2
             top: 0
 
         @media (max-width: $sm)
-            left: 30%
+            left: 80px
 
     &__item
         position: relative
@@ -574,11 +566,12 @@ h2
             position: absolute
             z-index: 1
             max-width: 100%
+            width: 100%
 
             @media (max-width:$sm)
                 left: 0
                 right: 0
-                width: 100%
+                width: 95%
         
         &__title 
             font-size: 20px
@@ -592,6 +585,8 @@ h2
             font-size: 16px
             color: $black
             line-height: 1.4
+            @media (max-width:$sm)
+                font-size: 15px
 
 .right
     .benefits__inner
@@ -599,8 +594,7 @@ h2
         padding: 35px 0 0px 61px
 
         @media (max-width: 576px)
-            left: 11%
-            width: 63%
+            width: 65%
 
 .tall
     grid-row: span 2
@@ -627,8 +621,6 @@ h2
             @media (max-width: 800px)
                 left: 20px
 
-            @media (max-width: $sm)
-                left: 120px
                 
         &__item
             &__title
@@ -774,6 +766,12 @@ h2
     top: var(--scroll-top, 0)
 
 .author
+    &-head
+        font-weight: 700
+        font-size: 36px
+        line-height: 43px
+        margin-top: 26px
+
     &-avatar
         img
             max-width: 100%
@@ -786,13 +784,13 @@ h2
         h4
             font-weight: 700
             font-size: 36px
-            line-height: 43.2px
+            line-height: 43px
             margin-top: 26px
 
         p
             font-weight: 400
             font-size: 18px
-            line-height: 21.6px
+            line-height: 21px
             text-align: center
             color: $black
 
@@ -992,36 +990,17 @@ h2
             line-height: 50px
 
 
-/* CUSTOMIZED B24 CRM-FORM */
-
-.b24-form-header-title
-	font-size: 56px!important
-	line-height: 67px!important
-    color: $black
-
-    @media (max-width: $md)
-        font-size: 50px!important
-        line-height: 68px!important
-
-    @media (max-width: $sm) 
-        font-size: 40px!important
-        line-height: 58px!important
-
-    @media (max-width: 475px) 
-        font-size: 50px!important
-        line-height: 68px!important
-
 #b2412 
     .col-md-6
-	    flex: 0 0 100%!important
-	    max-width: 100%!important
+        flex: 0 0 100%!important
+        max-width: 100%!important
 
 .b24-form-btn-container
-	justify-content: center!important
+    justify-content: center!important
 
 .b24-form-btn
-	width: auto!important
-	max-width: 409px!important
+    width: auto!important
+    max-width: 409px!important
     font-size: 25px !important
     line-height: 30px !important
     margin: 0 auto !important
@@ -1049,6 +1028,23 @@ h2
     font-size: 24px!important
     line-height: 30px!important
 
-// .b24-form-control
-//     &-not-empty + .b24-form-control-label
-//         top: -5px !important
+.b24-form-control
+    &-not-empty + .b24-form-control-label
+        top: -5px !important
+
+.b24-form-header-title
+    font-size: 56px!important
+    line-height: 67px!important
+    color: $black
+
+    @media (max-width: $md)
+        font-size: 50px!important
+        line-height: 68px!important
+
+    @media (max-width: $sm)
+        font-size: 40px!important
+        line-height: 58px!important
+
+    @media (max-width: 475px)
+        font-size: 50px!important
+        line-height: 68px!important
