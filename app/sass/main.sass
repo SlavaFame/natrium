@@ -15,9 +15,9 @@ $xxl: 1400px
 
 $shadow: 4px 4px 15px 0px #2E3F4F40
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
 
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Oswald:wght@200..700&display=swap')
 
 *
     font-family: "Onest"
@@ -163,19 +163,30 @@ h2
             padding-left: 0
 
 .banner
-    background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 13% 86%/151% no-repeat
     height: 976px
+    background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 79% / 128% no-repeat
+
+    @media (max-width: 2560px)
+        background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 79% / 128% no-repeat
+
+    @media (max-width: 1920px)
+        background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 13% 86% / 151% no-repeat
 
     @media (max-width: 1024px)
-        background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 11% 100%/140% no-repeat
+        background: linear-gradient(to right, white 55%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 100% / 125% no-repeat
         height: auto
         padding-bottom: 50px
 
     @media (max-width: $md)
+        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 50% / 130% no-repeat
         padding-bottom: 30px
 
     @media (max-width: $sm)
+        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 150% no-repeat
         padding-bottom: 20px
+
+    @media (max-width: 425px)
+        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 230% no-repeat 
 
     p
         color: $black
@@ -240,26 +251,53 @@ h2
             margin: 0 auto
 
 .freeConsultation
-    background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -500px / 100% no-repeat
     padding-bottom: 160px
+    background: linear-gradient(to top, $grey-3 60%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -700px / 100% no-repeat
+
+    @media (max-width: 2560px)
+        background: linear-gradient(to top, $grey-3 60%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -700px / 100% no-repeat
+
+    @media (max-width: 2240px)
+        background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -600px / 100% no-repeat
+
+    @media (max-width: 2160px)
+        background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -575px / 100% no-repeat
+
+    @media (max-width: 1920px)
+        background: linear-gradient(to top, $grey-3 63%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -500px / 100% no-repeat
+
+    @media (max-width: 1800px)
+        background: linear-gradient(to top, $grey-3 65%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -450px / 100% no-repeat
+
+    @media (max-width: 1600px)
+        background: linear-gradient(to top, $grey-3 70%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -400px / 100% no-repeat
 
     @media (max-width: $xxl)
-        background: linear-gradient(to top, $grey-3 74%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -345px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 70%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -345px / 100% no-repeat
+
+    @media (max-width: 1366px)
+        background: linear-gradient(to top, $grey-3 70%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -330px / 100% no-repeat
+
+    @media (max-width: 1280px)
+        background: linear-gradient(to top, $grey-3 70%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -310px / 100% no-repeat
 
     @media (max-width: $xl)
-        background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -285px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 72%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -285px / 100% no-repeat
 
     @media (max-width: $lg)
         background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -220px / 100% no-repeat
 
     @media (max-width: 800px)
-        background: linear-gradient(to top, $grey-3 79%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -165px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 80%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -165px / 100% no-repeat
 
     @media (max-width: $md)
-        background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -155px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 80%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -150px / 100% no-repeat
 
     @media (max-width: $sm) 
-        background: linear-gradient(to top, $grey-3 80%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -92px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 86%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -92px / 100% no-repeat
+
+    @media (max-width: 475px) 
+        background: linear-gradient(to top, $grey-3 86%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -60px / 100% no-repeat
 
     &-strip
         background-color: $blue
@@ -279,6 +317,10 @@ h2
             left: 0
     h2
         padding-top: 322px
+        
+        @media (max-width: $sm)
+            padding-top: 150px
+
     .btn
         display: block
         margin: 0 auto
@@ -435,22 +477,25 @@ h2
         background: linear-gradient(to top,$grey-3 73%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -346px / 100% no-repeat
 
     @media (max-width: $xl)
-        background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -285px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 75%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -285px / 100% no-repeat
 
     @media (max-width: $lg)
-        background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -220px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 75%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -220px / 100% no-repeat
 
     @media (max-width: 800px)
         background: linear-gradient(to top, $grey-3 79%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -165px / 100% no-repeat
 
     @media (max-width: $md)
-        background: linear-gradient(to top, $grey-3 75%,transparent 100%),url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -155px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 86%,transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -155px / 100% no-repeat
 
     @media (max-width: $sm) 
-        background: linear-gradient(to top, $grey-3 80%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -92px / 100% no-repeat
+        background: linear-gradient(to top, $grey-3 86%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -92px / 100% no-repeat
+
+    @media (max-width: 475px) 
+        background: linear-gradient(to top, $grey-3 87%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/consultation.jpg) 0 -60px / 100% no-repeat
 
     h2
-        margin-top: 120px
+        margin-top: 120px 
 
     &-strip
         background-color: $blue
@@ -493,7 +538,7 @@ h2
         grid-auto-flow: dense
 
     @media (max-width: $md)
-        gap: 30px
+        margin: 0 auto
 
     @media (max-width: $sm)
         margin: 30px auto
@@ -512,6 +557,10 @@ h2
         bottom: -5px
         z-index: 2
 
+        @media (max-width: 1024px)
+            position: absolute
+            top: 0
+
         @media (max-width: $sm)
             left: 30%
 
@@ -524,6 +573,7 @@ h2
         svg
             position: absolute
             z-index: 1
+            max-width: 100%
 
             @media (max-width:$sm)
                 left: 0
@@ -572,7 +622,7 @@ h2
                 left: -60px
 
             @media (max-width: 1024px)
-                left: -40px
+                left: 0
 
             @media (max-width: 800px)
                 left: 20px
@@ -630,6 +680,7 @@ h2
         .slick-track
             display: flex
             gap: 2.4rem
+            min-height: 385px
 
             div
                 margin: 0 auto
@@ -642,8 +693,9 @@ h2
         background-color: $grey-3
         border-radius: 20px
         box-shadow: $shadow
-        padding: 40px
+        padding: 40px 30px
         max-width: 409px
+        min-height: 365px
 
     &-content
         margin: 0 auto
@@ -656,6 +708,70 @@ h2
     &-author
         margin: 0 auto
         display: block
+
+        &:hover
+            cursor: pointer
+            transform: translateY(-3px)
+
+.overlay
+    display: none
+    position: fixed
+    inset: 0
+    background: rgba(0, 0, 0, 0.85)
+    z-index: 1000
+    backdrop-filter: blur(5px)
+    animation: fadeIn 0.3s ease
+    overflow-y: auto
+    padding: 40px 20px
+    
+    &-content
+        position: relative
+        max-width: 800px
+        width: 90%
+        margin: 20px auto
+        background: $white
+        border-radius: 20px
+        padding: 50px
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3)
+        animation: slideUp 0.4s ease
+        font-style: italic
+
+    &-close
+        position: absolute
+        top: 20px
+        right: 20px
+        font-size: 28px
+        line-height: 1
+        cursor: pointer
+        color: #666
+        transition: color 0.2s
+        background: transparent
+        border: none
+        padding: 5px
+
+        &:hover
+            color: $black
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes slideUp
+    from
+        opacity: 0
+        transform: translateY(30px)
+    to
+        opacity: 1
+        transform: translateY(0)
+
+.no-scroll
+    overflow: hidden
+    position: fixed
+    width: 100%
+    height: 100%
+    top: var(--scroll-top, 0)
 
 .author
     &-avatar
@@ -701,7 +817,7 @@ h2
     background-color: transparent
     background-repeat: no-repeat
     background-position: center center
-    background-image: url("data:image/svg+xml,%3Csvg width='48' height='24' viewBox='0 0 48 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM47.0607 13.0607C47.6464 12.4749 47.6464 11.5251 47.0607 10.9393L37.5147 1.3934C36.9289 0.807611 35.9792 0.807611 35.3934 1.3934C34.8076 1.97919 34.8076 2.92893 35.3934 3.51472L43.8787 12L35.3934 20.4853C34.8076 21.0711 34.8076 22.0208 35.3934 22.6066C35.9792 23.1924 36.9289 23.1924 37.5147 22.6066L47.0607 13.0607ZM2 12V13.5H46V12V10.5H2V12Z' fill='%232E3F4F'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='24' viewBox='0 0 48 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM47.0607 13.0607C47.6464 12.4749 47.6464 11.5251 47.0607 10.9393L37.5147 1.3934C36.9289 0.807611 35.9792 0.807611 35.3934 1.3934C34.8076 1.97919 34.8076 2.92893 35.3934 3.51472L43.8787 12L35.3934 20.4853C34.8076 21.0711 34.8076 22.0208 35.3934 22.6066C35.9792 23.1924 36.9289 23.1924 37.5147 22.6066L47.0607 13.0607ZM2 12V13.5H46V12V10.5H2V12Z' fill='%232E3F4F'%3E%3C/path%3E%3C/svg%3E")
     cursor: pointer
 
 .slick-prev 
@@ -775,7 +891,7 @@ h2
         
         &.active .tabs-text 
             padding: 20px 0
-            max-height: 200px
+            max-height: 300px
 
 .content-opacity
     background-color: rgba(239, 241, 244, 0.8)
@@ -874,3 +990,65 @@ h2
         @media (max-width: $sm)
             font-size: 30px
             line-height: 50px
+
+
+/* CUSTOMIZED B24 CRM-FORM */
+
+.b24-form-header-title
+	font-size: 56px!important
+	line-height: 67px!important
+    color: $black
+
+    @media (max-width: $md)
+        font-size: 50px!important
+        line-height: 68px!important
+
+    @media (max-width: $sm) 
+        font-size: 40px!important
+        line-height: 58px!important
+
+    @media (max-width: 475px) 
+        font-size: 50px!important
+        line-height: 68px!important
+
+#b2412 
+    .col-md-6
+	    flex: 0 0 100%!important
+	    max-width: 100%!important
+
+.b24-form-btn-container
+	justify-content: center!important
+
+.b24-form-btn
+	width: auto!important
+	max-width: 409px!important
+    font-size: 25px !important
+    line-height: 30px !important
+    margin: 0 auto !important
+    display: block !important
+
+.b24-form-control-string 
+    .b24-form-control
+        font-size: 30px !important
+        line-height: 38px !important
+        padding: 15px 10px !important
+        margin: 15px 0 !important
+
+.b24-form-wrapper
+    max-width:100%!important
+
+.b24-form-content
+    max-width: 900px!important
+    margin: 0 auto!important
+
+.b24-form-sign
+    margin: 0 auto!important
+    max-width: 900px!important
+
+.b24-form-control-label
+    font-size: 24px!important
+    line-height: 30px!important
+
+// .b24-form-control
+//     &-not-empty + .b24-form-control-label
+//         top: -5px !important
