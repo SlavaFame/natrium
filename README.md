@@ -1,3 +1,5 @@
+Сборка с помощью Gulp:
+
 npm init <br>
 npm install --global gulp-cli <br>
 npm install --save-dev gulp <br>
