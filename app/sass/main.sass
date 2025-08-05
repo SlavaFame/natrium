@@ -96,20 +96,18 @@ h2
 
         @media (max-width: $sm)
             flex-wrap: wrap
+            gap: 0
 
         a
             color: $white
             text-transform: uppercase
-            margin-right: 94px
+            margin-right: 20px
     
     img, svg
         margin: 15px 0
         
         @media (max-width:2560px)
-            margin: 15px 0 15px 96px
-
-        @media (max-width: $xxl)
-            margin: 15px 0 15px 96px
+            margin: 15px 0 15px 15px
 
         @media (max-width: $sm)
             margin: 15px 0
@@ -135,6 +133,10 @@ h2
         box-shadow: $shadow
         transition: 0.3s ease
         color: $white
+
+    @media (max-width: $sm)
+        font-size: 20px
+        line-height: 24px
 
 .mainBlock
     padding-right: 0
@@ -170,13 +172,16 @@ h2
 
 .banner
     height: 976px
-    background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 79% / 128% no-repeat
+    background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 67% / 128% no-repeat
 
     @media (max-width: 2560px)
         background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 79% / 128% no-repeat
 
     @media (max-width: 1920px)
         background: linear-gradient(to right, white 43%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 13% 86% / 151% no-repeat
+
+    @media (max-width: 1440px)
+        background: linear-gradient(to right, white 43%,transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 35% 67% / 150% no-repeat
 
     @media (max-width: 1024px)
         background: linear-gradient(to right, white 55%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 100% / 125% no-repeat
@@ -188,15 +193,8 @@ h2
         padding-bottom: 30px
 
     @media (max-width: $sm)
-        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 150% no-repeat
+        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / cover no-repeat
         padding-bottom: 20px
-
-    @media (max-width: 425px)
-        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 230% no-repeat 
-
-    @media (max-width: 376px)
-        background: linear-gradient(to right, white 50%, transparent 100%), url(https://opti.ooo/bitrix/templates/opti/img/team.jpg) 0 0 / 260% no-repeat 
-
 
     p
         color: $black
@@ -204,6 +202,10 @@ h2
         font-size: 36px
         line-height: 32.4px
         margin-top: 42px
+
+    @media (max-width: 475px)
+        font-size: 26px
+        line-height: 32px
         
     .btn
         display: block
@@ -256,6 +258,9 @@ h2
             line-height: 28.8px
             padding: 35px 60px 
             text-transform: none
+
+            @media (max-width: 425px)
+                padding: 35px
 
         svg
             margin: 0 auto
@@ -363,6 +368,8 @@ h2
         @media (max-width: $md)
             width: auto
             padding: 0
+            font-size: 20px
+            line-height: 23px
 
         @media (max-width: 375px)
             font-size: 18px
@@ -390,6 +397,8 @@ h2
         z-index: 1
 
         @media (max-width: 425px)
+            font-size: 19px
+            line-height: 23px
             padding: 29px 16px 15px 110px
             
 
@@ -552,9 +561,19 @@ h2
         @media (max-width: 1024px)
             position: absolute
             top: 0
+            padding: 43px 0
 
         @media (max-width: $sm)
-            left: 80px
+            left: 180px
+
+        @media (max-width: 475px)
+            left: 140px
+
+        @media (max-width: 425px)
+            left: 130px
+
+        @media (max-width: 375px)
+            left: 105px
 
     &__item
         position: relative
@@ -591,10 +610,20 @@ h2
 .right
     .benefits__inner
         left: 0
-        padding: 35px 0 0px 61px
+        padding: 35px 0 0 60px
 
         @media (max-width: 576px)
-            width: 65%
+            width: 62%
+            left: 45px
+
+        @media (max-width: 475px)
+            left: 0
+            
+        @media (max-width: 425px)
+            left: 0
+
+        @media (max-width: 375px)
+            left: -15px
 
 .tall
     grid-row: span 2
@@ -602,7 +631,7 @@ h2
     .benefits
         &__inner
             left:0
-
+            
             @media (max-width: 1440px)
                 left: -100px
     
@@ -617,11 +646,23 @@ h2
 
             @media (max-width: 1024px)
                 left: 0
+                padding: 43px 0
 
             @media (max-width: 800px)
                 left: 20px
 
-                
+            @media (max-width: $sm)
+                left: 150px
+
+            @media (max-width: 475px)
+                left: 100px
+
+            @media (max-width: 425px)
+                left: 90px
+
+            @media (max-width: 375px)
+                left: 60px
+
         &__item
             &__title
                 font-size: 36.11px
@@ -1036,6 +1077,8 @@ h2
     font-size: 56px!important
     line-height: 67px!important
     color: $black
+    letter-spacing: 0 !important
+    word-break: normal !important
 
     @media (max-width: $md)
         font-size: 50px!important
