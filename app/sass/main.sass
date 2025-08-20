@@ -535,9 +535,6 @@ h2
     @media (max-width: $xl)
         gap: 30px
 
-    @media (max-width: $lg)
-        grid-auto-flow: dense
-
     @media (max-width: $md)
         margin: 0 auto
 
@@ -562,6 +559,7 @@ h2
             position: absolute
             top: 0
             padding: 43px 0
+            left: 280px
 
         @media (max-width: $sm)
             left: 180px
@@ -612,6 +610,9 @@ h2
         left: 0
         padding: 35px 0 0 60px
 
+        @media (max-width: 768px)
+            left: 135px
+
         @media (max-width: 576px)
             width: 62%
             left: 45px
@@ -649,19 +650,14 @@ h2
                 padding: 43px 0
 
             @media (max-width: 800px)
-                left: 20px
+                left: 240px
 
             @media (max-width: $sm)
                 left: 150px
 
             @media (max-width: 475px)
-                left: 100px
-
-            @media (max-width: 425px)
-                left: 90px
-
-            @media (max-width: 375px)
-                left: 60px
+                left: 0
+                width: 95%
 
         &__item
             &__title
@@ -675,7 +671,6 @@ h2
                 @media (max-width: $lg)
                     font-size: 30px
                     line-height: 32px
-                    text-align: left
 
                 @media (max-width: $md)
 
@@ -690,7 +685,6 @@ h2
 
                 @media (max-width: $lg)
                     font-size: 20px
-                    text-align: left
 
 .help
     h2
@@ -914,6 +908,10 @@ h2
         overflow: hidden
         transition: max-height 0.3s ease, padding 0.3s ease
 
+        @media (max-width: $md)
+            font-size: 18px
+            line-height: 21px
+
     &-item
         padding: 18px 24px 18px 57px
         border: 2px solid $blue
@@ -923,6 +921,9 @@ h2
         font-size: 24px
         line-height: 24px
         overflow: hidden
+
+        @media (max-width: $md)
+            padding: 18px 24px 18px 50px
         
         &.active .tabs-head
             &:after
@@ -930,7 +931,7 @@ h2
         
         &.active .tabs-text 
             padding: 20px 0
-            max-height: 300px
+            max-height: 500px
 
 .content-opacity
     background-color: rgba(239, 241, 244, 0.8)
